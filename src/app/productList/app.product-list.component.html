@@ -1,0 +1,38 @@
+<div class="row mt-5 mr-auto ml-auto" [style.width.%]="'95'">
+    <div class="col-sm-12 form-inline">
+        <label class="mr-3">Filter By</label>
+        <input type="text" class="form-control mr-3" [(ngModel)]="searchKey" />
+        <input type="button" class="btn btn-primary mr-3" value="Search" (click)="searchProducts()" />
+    </div>
+</div>
+
+<div class="row mt-5 mr-auto ml-auto" [style.width.%]="'95'">
+    <div class="col-sm-12 form-inline">
+       {{searchKey ? 'Following are the products whose name contains : ' + searchKey : ''}}
+    </div>
+</div>
+
+<div class="row mt-5 mr-auto ml-auto" [style.width.%]="'95'">
+    <div class="col-sm-12">
+        <table class="table table-bordered table-hover table-sm table-responsive-sm">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Rating</th>
+                    <th scope="col">Show/Hide</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of filteredProducts; let i = index" [ngClass]="{'table-info': i%2 != 0}">
+                    <td>{{product.name | uppercase | FieldCharReplacor: ' '}}</td>
+                    <td>{{product.price | currency: 'EUR': true : '1.2-2'}}</td>
+                    <td class="text-danger font-weight-bold">{{product.rating}}</td>
+                    <td>
+                        <star-rating [rating]='product.rating' [id] = 'product.id' (notifyLikeStatus)="onNotifyLikeStatus($event)"></star-rating>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+[{
+    "id": 69,
+    "name": "aaa a",
+    "price": 229.13,
+    "rating": 1
+},
+{
+    "id": 66,
+    "name": "abb b",
+    "price": 982.5,
+    "rating": 2
+},
+{
+    "id": 67,
+    "name": "acc c",
+    "price": 1147.2,
+    "rating": 3
+},
+{
+    "id": 68,
+    "name": "add d",
+    "price": 182.3,
+    "rating": 4
+},
+{
+    "id": 58,
+    "name": "aee e",
+    "price": 403.42,
+    "rating": 5
+}]

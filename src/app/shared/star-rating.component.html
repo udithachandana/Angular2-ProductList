@@ -1,0 +1,9 @@
+<div style="width: 200px;">
+    <i [style.cursor] = "'pointer'" 
+       [ngClass]="{'fas fa-thumbs-up fa-sm text-success mr-2' : true, 'text-muted' : rating == 5}" 
+       (click) = "onLikeStatusClick(true)"
+    ></i>
+    <i [style.cursor] = "'pointer'" 
+       [ngClass]="{'fas fa-thumbs-down fa-sm text-danger mr-5' : true, 'text-muted' : rating == 0}" (click) = "onLikeStatusClick(false)"></i>
+    <i *ngFor="let star of ratingStars" class="fas fa-star fa-sm text-warning"></i>
+</div>

@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card mx-auto mt-3 w-75 border border-primary">
+      <div class="card-header bg-primary text-white">
+        Welcome
+      </div>
+      <div class="card-body text-center">
+        <img src="assets/images/acme.png" alt="" [style.cursor]="'pointer'" [ngClass]="{'border logo': true, 'border-primary': logoClass, 'border-danger': !logoClass}"
+          (click)='logoClicked()'>
+        <div class="text-center mt-5">
+          <p>Developed by:</p>
+          <h5>Uditha Ranasinghe</h5>
+          <p>
+            @uditha.ranasinghe
+            <br/>
+            <a [href]="myProfileUrl">http://uditha.test.web.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

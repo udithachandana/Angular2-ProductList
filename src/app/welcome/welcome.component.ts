@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './welcome.component.html',
+  styleUrls: ['./welcome.component.css']
 })
-export class AppComponent {
+export class WelcomeComponent {
   title = '';
   myProfileUrl = '';
   logoClass = true;
@@ -16,5 +15,6 @@ export class AppComponent {
 
   constructor(){
     this.title = 'Acme product management';
+    this.myProfileUrl = 'http://uditha.test.web.com';
   }
 }
